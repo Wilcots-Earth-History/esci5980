@@ -1,0 +1,2 @@
+# esci5980
+UMN ESCI 5980 Fall 2026
