@@ -1,0 +1,14 @@
+# environment.yml
+name: esci5980
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - matplotlib
+  - plotly
+  - scipy
+  - scikit-learn
+  - jupyterlab
+  - pip
+  - seaborn 
