@@ -1,0 +1,80 @@
+% -------READ ME--------%
+% This first part of a LaTeX document is called the preamble
+% Here, you import any packages that you might need later on in your document
+% You can also define your own variable names, set colors for things like hyperlinks and references, and setup font and margin sizes
+
+% Any line that starts with a '%' symbol is a comment. These lines won't be read by your compiler, they're just for you to leave yourself notes (or draft text).
+% You can quickly turn any line into a comment by pressing cmd + / on Mac or ctrl + / on Windows 
+
+\documentclass{article} % can be book, report, etc. there are lots of options. 
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath} % required for some math symbols
+\usepackage[12pt]{geometry} % let's use 12 pt font
+\usepackage{hyperref} % required for inserting hyperlinks, urls, email addresses, etc.
+\hypersetup{
+    colorlinks = true,
+    linkbordercolor = {white},
+    linkcolor = {blue},
+    urlcolor = {red}
+} % pick whatever color(s) you'd like for your links
+
+% Now we will set up the page dimensions.
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.1in
+\parindent = 0.0in
+
+% If you want to add a title to your document, do so here
+\title{ESCI 5980 Setup}
+\author{Julia Wilcots}
+\date{September 3, 2026}
+% the title will not show up until you run the command \maketitle below
+
+% until now, we have not printed anything. Here, we tell the compiler to start making our pdf
+\begin{document}
+\maketitle % print the title, author and date we defined above.
+
+\section{\LaTeX~basics}
+Let's start with a simple overview of \LaTeX, the preferred document preparation/typesetting system for many scientists, engineers, and mathematicians. In our class, you will use \LaTeX~exclusively to prepare all assignments.
+
+The primary benefits of using \LaTeX~over other word processors (like Microsoft Word, Pages, or Google Docs) include: streamlined bibliographic entries and bibliography formatting; excellent rendering of mathematical and scientific symbols and super/subscripts (e.g., $\Delta_{47}$, $\int_a^bf(x)~dx$, CO$_2$ + H$_2$O $\rightleftharpoons$ H$_2$CO$_3$), all of which can be typed on a normal QWERTY keyboard with no need for finding keyboard shortcuts; straightforward incorporation of images and graphics; and no faffing with things like indentation sliders in Word. Of course, \LaTeX~is its own beast and has downsides, the largest of which is probably a relatively steep learning curve. However, I believe it is an important skill to learn and might turn out to be your go-to text editor by the end of this class! 
+
+\subsection{Getting started}
+We will start by writing one \texttt{.tex} file and \textit{compiling} it into a \texttt{.pdf} file. This is made incredibly easy in the online (free) software \href{http://www.overleaf.com}{Overleaf}. Overleaf also allows you to share your projects with collaborators, which means you can work together on the same document or leave comments for co-authors, just like in Google Docs. 
+
+I have found that the easiest way to learn LaTeX is to look at someone else's document. So, to that end, open this file (\texttt{setup-instructions.tex}) in Overleaf, press the green button ``Compile'' that appears, and render the \texttt{.pdf} output. You should see the ``raw'' \texttt{.tex} file next to the PDF. 
+
+\textit{Before we move on, inspect the paragraph I just wrote in the .tex file. How did I render ".tex" and ".pdf"? Why are the quotes around ``.tex'' and ``.pdf'' different in this sentence than they are in the last sentence? How am I typesetting italicized text in this paragraph? Why is the link to Overleaf in the last paragraph red? What would I change to make it blue? (Hint: check the preamble.)}
+
+Most of the time, you can just type words into your .tex file and expect them to appear in the PDF. For example, in these sentences I am using no fancy formatting or special symbols. Easy.
+
+But, if I wanted to add some \emph{emphasis} or \textbf{boldness} to my writing, I would need to start incorporating some LaTeX-specific commands. These are \textit{very} easy to implement in Overleaf! In fact, you can use the same keyboard shortcuts to add \textit{italicized} or \textbf{bold} font that you would use in any other program (i.e. cmd-I/cmd-B or ctrl-I/ctrl-B). 
+
+\subsubsection*{Commands}
+You have probably noticed by now that every command starts with a \textbackslash. If you want to find a command in Overleaf, simply start by typing \textbackslash~and a menu of options will appear. This makes things much easier and faster than if you use something like TeXShop to write your LaTeX (which you are welcome to do, but it will be harder).
+
+\subsubsection*{Spaces}
+Wait! Why are all these $\sim$ symbols around in the .tex file, but not in the PDF? Well, after you use a command to insert a symbol (like ``\textbackslash textbackslash'' above), \LaTeX~will not automatically insert a space, even if you hit the spacebar. It's a little annoying, but it allows us to type more legibly in the plain text editor. All you need to do is insert a tilde ($\sim$) after the command and things will render as normal.
+
+There are a lot of other ways of inserting space in your final document... For example, two \textbackslash s in a row will create a new line\\ like this. \\  More spacing techniques will come up as needed, but it's good to remember that one of the main goals of \LaTeX~is to have the compiler determine what spacing works best for your document. By default, \LaTeX~will figure out where to break pages, put figures, and fit tables. You can manipulate these decisions, but you do not have to.
+
+\subsubsection*{Comments}
+Any line that starts with a `\%' symbol is a comment. These lines won't be read by your compiler, they're just for you to leave yourself notes (or draft text). You can quickly turn any line into a comment by pressing cmd + / on Mac or ctrl + / on Windows.
+% Where is this line in the PDF? Trick question.
+
+\section{Setup assignment}
+For the first week of class, you should:
+\begin{enumerate}
+    \item Set up an Overleaf account using your @umn.edu email address.
+    \item Create a New Project called ``ESCI 5980'' where you will put all of your files for this class. 
+    \item Open your ESCI 5980 project and import this file (setup-instructions.tex). Inspect the raw text and compile the pdf. 
+    \item Create a new file called W01\_[your x500] (e.g., W01\_jwilcots). You may copy the preamble from this file, use an Overleaf template, or search online for inspiration.
+    \item Your assignment for this week is to turn in a .pdf compiled from W01\_[your x500] that contains: your name, your email address \textit{linked} using the command \texttt{\textbackslash href} like so: \href{mailto:jwilcots@umn.edu}{jwilcots@umn.edu}, and one fun fact about yourself. The submission should be called \texttt{W01\_[your x500].pdf} and is due on Canvas by 11:15 am on Thursday, September 10.
+\end{enumerate}
+
+\end{document}
