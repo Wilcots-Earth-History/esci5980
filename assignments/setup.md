@@ -1,7 +1,6 @@
 ## Week 0 assignment: Set up LaTeX, Python, and Matlab
 
-Instructions for getting started with LaTeX in Overleaf are included in the document ``setup-instructions.pdf''. 
-T
+Instructions for getting started with LaTeX in Overleaf are included in the document setup-instructions.pdf. 
 
 ### Conda set up
 We will use **conda** as our Python package manager. If you already use conda with Python, you can skip ahead to step 2. If not:
@@ -29,3 +28,5 @@ This should open the Jupyter launcher in a tab in your browser.
 (type that in your text file)
 5. Save the file and then open a new launcher (blue button with a white + sign). This time, open the terminal.
 6. All you have to do to run your script is type `python HelloWorld.py`. You should see the phrase "Hello, World" printed in your terminal.
+
+You do not need to submit anything to show you have successfully set up Python, but it is crucial you get conda and the esci5980 environment set up before class on 9/10.
